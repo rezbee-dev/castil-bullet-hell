@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c2cw3ch1agxou"]
+
+[ext_resource type="Texture2D" uid="uid://bjrr215xkwmo0" path="res://sprites/trump.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://6r8h8xnjo2p1" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 52.0
+height = 152.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1388226412]
+script = ExtResource("1_g2els")
+
+[node name="Trump" type="Sprite2D" parent="." unique_id=1206715525]
+scale = Vector2(0.1, 0.104)
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1269647318]
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_qhqgy")

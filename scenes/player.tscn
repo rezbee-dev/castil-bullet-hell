@@ -9,11 +9,14 @@ height = 152.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1388226412]
 script = ExtResource("1_g2els")
+wobble_speed = 4.0
 
-[node name="Trump" type="Sprite2D" parent="." unique_id=1206715525]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1206715525]
 scale = Vector2(0.1, 0.104)
 texture = ExtResource("1_3vyb7")
+centered = false
+offset = Vector2(-1000, -1500)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1269647318]
-position = Vector2(0, -4)
+position = Vector2(3, -82)
 shape = SubResource("CapsuleShape2D_qhqgy")

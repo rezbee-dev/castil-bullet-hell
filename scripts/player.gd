@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 @export var wobble_speed: float = 5.0
-@export var wobble_intensity: float = 0.5
+@export var wobble_intensity: float = 0.3
 @onready var sprite: Sprite2D = $Sprite
 
 func _process(delta) -> void:
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 
 func _wobble():
 	if velocity.length() == 0:
-		sprite.rotation_degrees = 0
+		sprite.rotation = lerp(sprite.rotation, 0.0, 0.2)
 		print("i'm not moving!!")
 	else:
 		sprite.rotation_degrees = rad_to_deg(sin(Time.get_ticks_msec() * 0.001 * wobble_speed) * wobble_intensity)

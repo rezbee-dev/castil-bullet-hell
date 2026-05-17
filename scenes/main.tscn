@@ -11,3 +11,4 @@ offset_bottom = 650.0
 texture = ExtResource("1_0wfyh")
 
 [node name="Player" parent="." unique_id=1388226412 instance=ExtResource("2_0wfyh")]
+position = Vector2(577, 313)

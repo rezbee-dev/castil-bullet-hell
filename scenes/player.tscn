@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bjrr215xkwmo0" path="res://sprites/trump.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://6r8h8xnjo2p1" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://wfqon0xrk3be" path="res://scenes/lazer.gd" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://b1vc58kvecver" path="res://sprites/Laser.png" id="4_dqkch"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
 radius = 52.0
@@ -20,3 +22,32 @@ offset = Vector2(-1000, -1500)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1269647318]
 position = Vector2(3, -82)
 shape = SubResource("CapsuleShape2D_qhqgy")
+
+[node name="Lazer" type="Node2D" parent="." unique_id=1916078545]
+script = ExtResource("3_qhqgy")
+
+[node name="Right eye" type="Marker2D" parent="Lazer" unique_id=174107567]
+position = Vector2(8, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="Lazer/Right eye" unique_id=717369456]
+rotation = -1.5707964
+target_position = Vector2(0, 400)
+
+[node name="Laser" type="Sprite2D" parent="Lazer/Right eye" unique_id=970252968]
+position = Vector2(218, 1)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.205)
+texture = ExtResource("4_dqkch")
+
+[node name="Left eye" type="Marker2D" parent="Lazer" unique_id=355861171]
+position = Vector2(-23, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="Lazer/Left eye" unique_id=1929691242]
+rotation = -1.5707964
+target_position = Vector2(0, 400)
+
+[node name="Laser2" type="Sprite2D" parent="Lazer/Left eye" unique_id=893023521]
+position = Vector2(214, 1)
+rotation = 1.5707964
+scale = Vector2(0.07, 0.205)
+texture = ExtResource("4_dqkch")

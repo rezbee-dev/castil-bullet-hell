@@ -1,53 +1,58 @@
 [gd_scene format=3 uid="uid://c2cw3ch1agxou"]
 
-[ext_resource type="Texture2D" uid="uid://bjrr215xkwmo0" path="res://sprites/trump.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://6r8h8xnjo2p1" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://b2kp0wn0t5icn" path="res://sprites/Spritesheet.png" id="2_dqkch"]
 [ext_resource type="Script" uid="uid://wfqon0xrk3be" path="res://scenes/lazer.gd" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://b1vc58kvecver" path="res://sprites/Laser.png" id="4_dqkch"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
-radius = 52.0
-height = 152.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qlg0r"]
+radius = 7.000001
+height = 33.0551
 
 [node name="Player" type="CharacterBody2D" unique_id=1388226412]
 script = ExtResource("1_g2els")
 wobble_speed = 4.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1206715525]
-scale = Vector2(0.1, 0.104)
-texture = ExtResource("1_3vyb7")
+position = Vector2(13, 30)
+texture = ExtResource("2_dqkch")
 centered = false
-offset = Vector2(-1000, -1500)
+offset = Vector2(-13, -30)
+region_enabled = true
+region_rect = Rect2(868, 289, 26, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1269647318]
-position = Vector2(3, -82)
-shape = SubResource("CapsuleShape2D_qhqgy")
+position = Vector2(12.999999, 14.999999)
+shape = SubResource("CapsuleShape2D_qlg0r")
 
 [node name="Lazer" type="Node2D" parent="." unique_id=1916078545]
+position = Vector2(36, 3)
 script = ExtResource("3_qhqgy")
 
 [node name="Right eye" type="Marker2D" parent="Lazer" unique_id=174107567]
-position = Vector2(8, 0)
+position = Vector2(-23, 0)
 
 [node name="RayCast2D" type="RayCast2D" parent="Lazer/Right eye" unique_id=717369456]
 rotation = -1.5707964
-target_position = Vector2(0, 400)
+target_position = Vector2(-5.00679e-06, 111)
 
 [node name="Laser" type="Sprite2D" parent="Lazer/Right eye" unique_id=970252968]
-position = Vector2(218, 1)
+position = Vector2(62.430817, -0.99999946)
 rotation = 1.5707964
-scale = Vector2(0.07, 0.205)
+scale = Vector2(0.028, 0.057544645)
 texture = ExtResource("4_dqkch")
 
 [node name="Left eye" type="Marker2D" parent="Lazer" unique_id=355861171]
 position = Vector2(-23, 0)
 
 [node name="RayCast2D" type="RayCast2D" parent="Lazer/Left eye" unique_id=1929691242]
+visible = false
 rotation = -1.5707964
-target_position = Vector2(0, 400)
+target_position = Vector2(-5.00679e-06, 111)
 
 [node name="Laser2" type="Sprite2D" parent="Lazer/Left eye" unique_id=893023521]
-position = Vector2(214, 1)
+visible = false
+position = Vector2(58.473804, -1.0000002)
 rotation = 1.5707964
-scale = Vector2(0.07, 0.205)
+scale = Vector2(0.027, 0.051446002)
 texture = ExtResource("4_dqkch")

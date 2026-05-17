@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjrr215xkwmo0"
-path="res://.godot/imported/trump.png-31494c4719b8203be11fb6cf7783ea11.ctex"
+uid="uid://b2kp0wn0t5icn"
+path="res://.godot/imported/Spritesheet.png-e07385da3428e6a1636c12b78421149c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/trump.png"
-dest_files=["res://.godot/imported/trump.png-31494c4719b8203be11fb6cf7783ea11.ctex"]
+source_file="res://sprites/Spritesheet.png"
+dest_files=["res://.godot/imported/Spritesheet.png-e07385da3428e6a1636c12b78421149c.ctex"]
 
 [params]
 

@@ -8,3 +8,6 @@
   - endless enemy spawns
   - health bar 
   - game ends once player is dead
+
+## Contributers
+- rezbee
